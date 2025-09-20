@@ -124,6 +124,23 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Create mailto link as a simple solution
+    const subject = encodeURIComponent('Portfolio Contact Form');
+    const body = encodeURIComponent(`Email: ${email}\n\nMessage: ${message}`);
+    window.open(`mailto:tanishupakare@gmail.com?subject=${subject}&body=${body}`);
+    
+    // Reset form
+    e.target.reset();
+    setShowContact(false);
+    alert('Thank you for your message! Your email client should open with a pre-filled message.');
+  };
+
   return (
     <div className="relative min-h-screen text-white font-sans overflow-x-hidden">
       {/* Classical Art Background - Always visible */}
@@ -415,7 +432,7 @@ export default function App() {
                   animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
                   className="space-y-6"
-            action="https://formspree.io/f/your-id" method="POST"
+            onSubmit={handleSubmit}
           >
             <input
               type="email"
