@@ -457,7 +457,7 @@ export default function App() {
                      <p>LEARNING AND BUILDING SOLUTIONS THAT BRIDGE TECHNOLOGY & BUSINESS SINCE 2020</p>
                      <p>Prev @ ICICLE AI INSTITUTE</p>
                      <p>Co-Founder @ CHRONEX</p> 
-                     <p>Hometown, Maharashtra, India</p> 
+                     <p>Hometown: Dhule, Maharashtra, India</p> 
                    </div>
               </motion.div>
 
@@ -557,17 +557,12 @@ export default function App() {
                     className="max-w-80 max-h-80 rounded-2xl cursor-pointer"
                     style={{ filter: "brightness(0.9) contrast(1.1)" }}
                     whileHover={{ 
-                      scale: [1, 1.1, 1.15],
-                      rotateY: [0, 180, 360],
-                      boxShadow: [
-                        "0 0px 0px rgba(0, 0, 0, 0)",
-                        "0 15px 30px rgba(0, 0, 0, 0.3)",
-                        "0 30px 60px rgba(0, 0, 0, 0.5)"
-                      ],
+                      scale: 1.1,
+                      rotate: 5,
+                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
                       transition: { 
-                        duration: 1.0, 
-                        ease: "easeInOut",
-                        times: [0, 0.5, 1]
+                        duration: 0.3, 
+                        ease: "easeOut"
                       }
                     }}
                     whileTap={{ scale: 1.05 }}
