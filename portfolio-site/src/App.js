@@ -375,7 +375,7 @@ export default function App() {
                 transition={{ duration: 0.8 }}
                 className="space-y-4"
               >
-                <p className="text-sm font-light tracking-wider uppercase">creative</p>
+                <p className="text-2xl font-light tracking-wider uppercase">SOFTWARE</p>
                 <div className="space-y-2">
                   <motion.h2 
                     className="text-5xl lg:text-5xl font-semibold tracking-tight leading-none text-white inline-block"
