@@ -283,10 +283,10 @@ export default function App() {
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
-        <header className="flex justify-between items-start p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
-          <div className="space-y-2">
+        <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-3 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-4 sm:space-y-0">
+          <div className="space-y-1 sm:space-y-2 w-full sm:w-auto">
             <motion.h1 
-              className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-widest"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light tracking-widest text-center sm:text-left"
               style={{
                 color: '#E6D073', // More golden color
                 textShadow: '0 0 6px rgba(255, 215, 0, 0.4)' // More prominent golden shadow
@@ -300,14 +300,14 @@ export default function App() {
             >
               TANISH UPAKARE
             </motion.h1>
-            <p className="text-sm sm:text-base lg:text-lg font-light tracking-widest uppercase">COMPUTER SCIENCE & ECONOMICS STUDENT</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light tracking-widest uppercase text-center sm:text-left">COMPUTER SCIENCE & ECONOMICS STUDENT</p>
           </div>
           
           {/* Social Links - Center */}
-          <div className="flex space-x-3 sm:space-x-4 lg:space-x-6">
+          <div className="flex justify-center sm:justify-end space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 w-full sm:w-auto">
             <motion.a 
               href="mailto:tanishupakare2077@gmail.com"
-              className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
               whileHover={{ 
                 scale: 1.1,
                 rotate: 5,
@@ -324,7 +324,7 @@ export default function App() {
               href="https://www.linkedin.com/in/tanish-upakare/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
               whileHover={{ 
                 scale: 1.1,
                 rotate: -5,
@@ -341,7 +341,7 @@ export default function App() {
               href="https://github.com/tanishhh2077" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
               whileHover={{ 
                 scale: 1.1,
                 rotate: 3,
@@ -354,19 +354,37 @@ export default function App() {
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </motion.a>
+            <motion.a 
+              href="https://orcid.org/0009-0001-3398-3678" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+              whileHover={{ 
+                scale: 1.1,
+                rotate: -3,
+                boxShadow: "0 8px 25px rgba(166, 206, 57, 0.3)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="12" fill="#A6CE39"/>
+                <text x="12" y="16" textAnchor="middle" fontSize="8" fill="white" fontFamily="Arial, sans-serif" fontWeight="bold">iD</text>
+              </svg>
+            </motion.a>
           </div>
           
-          <nav className="flex space-x-4 sm:space-x-6 lg:space-x-8 text-xs sm:text-sm lg:text-base font-normal tracking-wider">
-            <a href="#about" className="hover:text-gray-300 transition-colors">ABOUT</a>
-            <a href="#skills" className="hover:text-gray-300 transition-colors">SKILLS</a>
-            <a href="#projects" className="hover:text-gray-300 transition-colors">PROJECTS</a>
-            <a href="#contact" className="hover:text-gray-300 transition-colors">CONTACT</a>
+          <nav className="flex flex-wrap justify-center sm:justify-end space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8 text-xs sm:text-sm lg:text-base font-normal tracking-wider mt-2 sm:mt-0">
+            <a href="#about" className="hover:text-gray-300 transition-colors px-2 py-1">ABOUT</a>
+            <a href="#skills" className="hover:text-gray-300 transition-colors px-2 py-1">SKILLS</a>
+            <a href="#projects" className="hover:text-gray-300 transition-colors px-2 py-1">PROJECTS</a>
+            <a href="#contact" className="hover:text-gray-300 transition-colors px-2 py-1">CONTACT</a>
           </nav>
         </header>
 
         {/* Main Content */}
-        <main className="px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <main className="px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-start">
             {/* Left Side - Main Title */}
             <div className="space-y-8">
               <motion.div
@@ -375,10 +393,10 @@ export default function App() {
                 transition={{ duration: 0.8 }}
                 className="space-y-4"
               >
-                <p className="text-2xl font-light tracking-wider uppercase">SOFTWARE</p>
-                <div className="space-y-2">
+                <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wider uppercase">SOFTWARE</p>
+                <div className="space-y-1 sm:space-y-2">
                   <motion.h2 
-                    className="text-5xl lg:text-5xl font-semibold tracking-tight leading-none text-white inline-block"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-tight leading-none text-white inline-block"
                     whileHover={{
                       color: '#FFD700',
                       textShadow: '0 0 8px rgba(255, 215, 0, 0.5)',
@@ -389,11 +407,11 @@ export default function App() {
                   >
                     DEVELOPER
                   </motion.h2>
-                  <div className="flex items-center space-x-4">
-                    <span className="text-4xl font-light">&</span>
+                  <div className="flex items-center space-x-2 sm:space-x-4">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-light">&</span>
                   </div>
                   <motion.h2 
-                    className="text-5xl lg:text-5xl font-semibold tracking-tight leading-none text-white inline-block"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-tight leading-none text-white inline-block"
                     whileHover={{
                       color: '#FFD700',
                       textShadow: '0 0 8px rgba(255, 215, 0, 0.5)',
@@ -412,7 +430,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="mt-32 max-w-xs py-16"
+                className="mt-16 sm:mt-24 md:mt-32 max-w-xs sm:max-w-sm py-8 sm:py-12 md:py-16"
               >
                 <a
                   href="https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt?si=10a805adc7c04749"
@@ -442,16 +460,16 @@ export default function App() {
             </div>
 
             {/* Right Side - Bio and Info */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
 
               {/* Bio */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-right space-y-4"
+                className="text-center sm:text-right space-y-3 sm:space-y-4"
               >
-                   <div className="text-sm font-light leading-relaxed space-y-1">
+                   <div className="text-xs sm:text-sm font-light leading-relaxed space-y-1 sm:space-y-1">
                      <p>COMPUTER SCIENCE & ECONOMICS @ UNIVERSITY OF WISCONSIN–MADISON</p>
                      <p>RESEARCH ASSISTANT @ KAUFMAN LAB / ADAPTIVE INFERENCE LABS, UW–MADISON</p>
                      <p>LEARNING AND BUILDING SOLUTIONS THAT BRIDGE TECHNOLOGY & BUSINESS SINCE 2020</p>
@@ -466,7 +484,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-right"
+                className="text-center sm:text-right"
               >
                 <motion.button 
                   onClick={() => {
@@ -491,7 +509,7 @@ export default function App() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="mt-16 text-right"
+                  className="mt-8 sm:mt-12 md:mt-16 text-center sm:text-right"
                 >
                   <p className="text-base text-white/70 italic font-light">
                     "The Apotheosis of Hercules" (1736) by François Lemoyne
@@ -503,7 +521,7 @@ export default function App() {
         </main>
 
         {/* About Section with Scrolling Activities */}
-        <section id="about" className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-black/20 backdrop-blur-sm mt-8 sm:mt-12 lg:mt-16">
+        <section id="about" className="px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-16 bg-black/20 backdrop-blur-sm mt-6 sm:mt-8 md:mt-12 lg:mt-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -520,7 +538,7 @@ export default function App() {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex-1 max-w-2xl text-center lg:text-left"
+                  className="flex-1 max-w-2xl text-center lg:text-left order-2 lg:order-1"
                 >
                 <p className="text-lg font-light leading-relaxed mb-6">
   I'm a student at the University of Wisconsin–Madison pursuing a B.S. in Computer Science and Economics, 
@@ -549,12 +567,12 @@ export default function App() {
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="flex-shrink-0"
+                  className="flex-shrink-0 order-1 lg:order-2 mb-6 lg:mb-0"
                 >
                   <motion.img 
                     src="/images/headshot.jpg" 
                     alt="Tanish Upakare"
-                    className="max-w-80 max-h-80 rounded-2xl cursor-pointer"
+                    className="max-w-64 sm:max-w-72 md:max-w-80 max-h-64 sm:max-h-72 md:max-h-80 rounded-2xl cursor-pointer mx-auto lg:mx-0"
                     style={{ filter: "brightness(0.9) contrast(1.1)" }}
                     whileHover={{ 
                       scale: 1.1,
@@ -576,7 +594,7 @@ export default function App() {
                 initial={{ opacity: 0, scaleX: 0 }}
                 whileInView={{ opacity: 1, scaleX: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-                className="flex items-center justify-center mt-56 mb-32 w-full"
+                className="flex items-center justify-center mt-32 sm:mt-40 md:mt-48 lg:mt-56 mb-16 sm:mb-24 md:mb-32 w-full"
               >
                 <div className="flex items-center w-full">
                   {/* Left ornaments - Extended Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89) */}
@@ -935,14 +953,14 @@ export default function App() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="relative h-[350px] sm:h-[450px] lg:h-[550px] overflow-hidden w-full max-w-5xl mx-auto mt-8 sm:mt-12 lg:mt-16"
+                className="relative h-[280px] sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden w-full max-w-5xl mx-auto mt-6 sm:mt-8 md:mt-12 lg:mt-16"
               >
                   <div
                     className="absolute inset-0 flex items-center justify-center"
                     key={currentActivity}
                   >
                     <div className="text-center space-y-4 sm:space-y-6 px-4">
-                      <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9', height: 'clamp(180px, 22vw, 350px)' }}>
+                      <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9', height: 'clamp(140px, 18vw, 350px)' }}>
                         {/* Current image blurring out */}
                         <img 
                           src={activities[currentActivity].image} 
@@ -958,10 +976,10 @@ export default function App() {
                           />
                         )}
                       </div>
-                      <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wider uppercase leading-tight">
+                      <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider uppercase leading-tight">
                         {activities[currentActivity].text}
                       </h4>
-                      <p className="text-sm sm:text-base lg:text-lg font-light text-gray-300 leading-relaxed">
+                      <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light text-gray-300 leading-relaxed">
                         {activities[currentActivity].description}
                       </p>
                       
